@@ -118,7 +118,7 @@ class FWuserController extends Controller
                 Notification::send($notifyUser, new MobileNotification($notifyUser));
                 
                 $store_notif = new Mobile_notification;
-                $store_notif->notification_type = 'Approved your post';
+                $store_notif->notification_type = "marked your post to 'Noticed'";
                 $store_notif->post_id = $id;
                 $store_notif->notification_from_user = 'USeP admin';
                 $store_notif->seen_notification = 0;
@@ -128,7 +128,7 @@ class FWuserController extends Controller
             else
             {
                 $store_notif = new Mobile_notification;
-                $store_notif->notification_type = 'Approved your post';
+                $store_notif->notification_type = "marked your post to 'Noticed'";
                 $store_notif->post_id = $id;
                 $store_notif->notification_from_user = 'USeP admin';
                 $store_notif->seen_notification = 0;
